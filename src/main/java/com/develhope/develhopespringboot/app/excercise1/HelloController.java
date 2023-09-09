@@ -28,4 +28,11 @@ public class HelloController {
         /*return the greeting*/
         return new ResponseEntity<>("good morning", HttpStatus.OK);
     }
+
+    /*Exercise 3*/
+    @GetMapping(value = {"info"})
+    public ResponseEntity<String > info(){
+
+        return new ResponseEntity<>("", HttpStatus.OK);
+    }
 }
