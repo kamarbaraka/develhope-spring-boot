@@ -1,2 +1,11 @@
 ### the request for task1
 GET http://localhost:8080/api/hello
+
+### for greeting
+GET http://localhost:8080/api/greeting
+
+### for info
+GET http://localhost:8080/api/info
+
+### for random
+GET http://localhost:8080/api/random
