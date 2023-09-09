@@ -9,3 +9,40 @@ GET http://localhost:8080/api/info
 
 ### for random
 GET http://localhost:8080/api/random
+
+
+
+#### meals
+### add meals
+POST http://localhost:8080/api/meals
+Content-Type: application/json
+
+[
+  {
+    "name": "pilau",
+    "price": 250.0,
+    "description": "rice mixed with meat"
+  },
+  {
+    "name": "mahamri",
+    "price": 15.0,
+    "description": "mandazi with baking soda"
+  },
+  {
+    "name": "choma",
+    "price": 35.0,
+    "description": "chapati with beans stew"
+  }
+]
+
+### get all meals
+GET http://localhost:8080/api/meals
+
+### get meal by name
+GET http://localhost:8080/api/meal/pilau
+
+### get by price range
+GET http://localhost:8080/api/meal/price?min=20.0&max=300.0
+
+### match description
+GET http://localhost:8080/api/meal/description-match/chapati with beans stew
