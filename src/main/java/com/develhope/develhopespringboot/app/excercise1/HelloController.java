@@ -11,12 +11,21 @@ import org.springframework.web.bind.annotation.RestController;
  * @author kamar baraka.*/
 
 @RestController
-@RequestMapping(value = {"/api/hello"})
+@RequestMapping(value = {"/api/"})
 public class HelloController {
 
-    @GetMapping
+    /*Exercise 1*/
+    @GetMapping(value = {"hello"})
     public ResponseEntity<String > hello(){
 
         return new ResponseEntity<>("hello world", HttpStatus.OK);
+    }
+
+    /*Exercise 2*/
+    @GetMapping(value = {"greeting"})
+    public ResponseEntity<String > greeting(){
+
+        /*return the greeting*/
+        return new ResponseEntity<>("good morning", HttpStatus.OK);
     }
 }
