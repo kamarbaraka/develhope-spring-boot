@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Random;
+
 /**
  * the hello controller.
  * @author kamar baraka.*/
@@ -34,5 +36,15 @@ public class HelloController {
     public ResponseEntity<String > info(){
 
         return new ResponseEntity<>("", HttpStatus.OK);
+    }
+
+    /*Exercise 4*/
+    @GetMapping(value = {"random"})
+    public ResponseEntity<String> random(){
+
+        if (new Random().nextBoolean())
+            return new ResponseEntity<>("true", HttpStatus.OK);
+
+        return new ResponseEntity<>("false", HttpStatus.BAD_REQUEST);
     }
 }
