@@ -1,10 +1,11 @@
 package com.develhope.develhopespringboot.app.excercise2;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.develhope.develhopespringboot.app.crud_operations.Ingredient;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 /**
  * the meal entity.
